@@ -24,9 +24,8 @@ public class CarDaoImpl implements CarDao{
     }
     @Override
     public List<Car> getCarList(int count) {
-        List<Car> list = new ArrayList<>();
-        count = count < 5 && count > 0 ? count : 5;
         if (count == 5) return cars;
+        List<Car> list = new ArrayList<>();
         for(int i = 0; i < count; i++) {
             list.add(cars.get(i));
         }
